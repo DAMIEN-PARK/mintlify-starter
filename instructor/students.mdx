@@ -1,0 +1,172 @@
+---
+title: "학생 관리"
+description: "학생 초대, 현황 확인, 상세 리포트 조회"
+---
+
+## 학생 관리 전체 현황 화면
+
+사이드바의 **[학생 관리]** 메뉴에 접근하면 전체 학생 현황을 한눈에 볼 수 있는 대시보드가 나타납니다.
+
+<CardGroup cols={4}>
+  <Card title="전체 학생 수" icon="users">
+    등록된 전체 학생 인원
+  </Card>
+  <Card title="활성 학생" icon="circle-check">
+    최근 7일 내 접속한 학생 수
+  </Card>
+  <Card title="총 대화 수" icon="comments">
+    전체 학생의 누적 AI 대화 건수
+  </Card>
+  <Card title="평균 접속일" icon="calendar-check">
+    학생 1인당 평균 활동 일수
+  </Card>
+</CardGroup>
+
+---
+
+## 학생 초대하기
+
+<Steps>
+  <Step title="학생 초대 버튼 클릭">
+    좌측 사이드바에서 **[학생 관리]** 를 클릭합니다. 학생 목록 페이지 우측 상단의 **[학생 초대]** 버튼을 클릭합니다.
+  </Step>
+  <Step title="강의 선택">
+    초대 팝업에서 학생을 초대할 **강의를 선택**합니다. 선택한 강의에 해당하는 초대 코드가 팝업 화면에 표시됩니다.
+
+    <Note>
+      개설된 강의가 여러 개인 경우, 학생이 참여할 정확한 강의를 선택하세요. 강의별로 초대 코드가 다릅니다.
+    </Note>
+  </Step>
+  <Step title="초대 코드 공유">
+    표시된 초대 코드 또는 초대 링크를 학생들에게 공유합니다.
+
+    - **[코드 복사]** 버튼으로 초대 코드만 복사
+    - **[링크 복사]** 버튼으로 직접 참여 가능한 초대 링크 복사
+    - 이메일, 메신저, LMS, 카카오톡 등 다양한 방법으로 공유 가능
+
+    <Tip>
+      초대 링크를 공유하면 학생들이 코드를 직접 입력할 필요 없이 링크 클릭만으로 강의에 바로 참여할 수 있어 더 편리합니다.
+    </Tip>
+  </Step>
+</Steps>
+
+---
+
+## 학생 목록 테이블
+
+학생 목록에서 강의에 참여한 전체 학생을 조회합니다.
+
+| 컬럼 | 설명 |
+|------|------|
+| 학생명 | 학생이 등록한 표시 이름 |
+| 이메일 | 가입 시 사용한 이메일 주소 |
+| 수강 강의 | 참여 중인 강의명 |
+| 최근 접속일 | 마지막 로그인 날짜 |
+| 총 대화 수 | 누적 AI 대화 건수 |
+| 상태 | 활성 / 비활성 배지 |
+| 상세보기 | 개별 학생 상세 리포트로 이동 |
+
+<Tabs>
+  <Tab title="강의별 필터">
+    강의 목록 상단의 강의 드롭다운에서 특정 강의를 선택하면 해당 강의 수강생만 필터링하여 조회할 수 있습니다.
+  </Tab>
+  <Tab title="학생 검색">
+    검색창에 학생 이름 또는 이메일 일부를 입력하면 해당 학생을 빠르게 찾을 수 있습니다.
+  </Tab>
+  <Tab title="정렬 옵션">
+    컬럼 헤더를 클릭하면 해당 기준으로 오름차순/내림차순 정렬이 가능합니다. 최근 접속일, 총 대화 수 기준 정렬을 활용해 학습 참여도를 파악하세요.
+  </Tab>
+</Tabs>
+
+---
+
+## 학생 상세 리포트
+
+학생 목록에서 특정 학생의 **[상세보기]** 를 클릭하면 개별 학습 리포트 화면으로 이동합니다.
+
+### 수강 정보
+
+<CardGroup cols={3}>
+  <Card title="강의명" icon="chalkboard">
+    학생이 수강 중인 강의 이름이 표시됩니다.
+  </Card>
+  <Card title="수강 기간" icon="calendar">
+    강의 시작일부터 현재까지의 수강 기간이 표시됩니다.
+  </Card>
+  <Card title="수강 상태" icon="circle-check">
+    **[수강 중]** 배지로 현재 활성 수강생임을 확인합니다.
+  </Card>
+</CardGroup>
+
+---
+
+### 활동 지표
+
+학생의 전반적인 플랫폼 활동을 수치로 확인합니다.
+
+<CardGroup cols={3}>
+  <Card title="총 로그인 수" icon="right-to-bracket">
+    강의 참여 이후 누적 로그인 횟수입니다.
+  </Card>
+  <Card title="활동 일수" icon="calendar-days">
+    실제로 GrowFit에 접속하여 활동한 날수입니다.
+  </Card>
+  <Card title="마지막 접속일" icon="clock">
+    가장 최근 접속한 날짜와 시간입니다.
+  </Card>
+</CardGroup>
+
+---
+
+### AI 실습 현황
+
+학생이 AI와 나눈 대화 및 비용 현황을 확인합니다.
+
+<CardGroup cols={2}>
+  <Card title="프롬프트 수" icon="pen-nib">
+    학생이 AI에게 보낸 총 프롬프트(질문) 건수
+  </Card>
+  <Card title="총 대화 수" icon="comments">
+    학생과 AI 간 누적 대화 턴(turn) 수
+  </Card>
+  <Card title="사용 비용" icon="dollar-sign">
+    학생이 사용한 AI 모델 토큰 기준 누적 비용
+  </Card>
+  <Card title="평균 토큰" icon="chart-bar">
+    대화 1건당 평균 사용 토큰 수
+  </Card>
+</CardGroup>
+
+---
+
+### 학습 활동 요약
+
+학생이 GrowFit의 주요 기능을 얼마나 활용했는지 확인합니다.
+
+<CardGroup cols={3}>
+  <Card title="프로젝트 생성 수" icon="folder-plus">
+    학생이 직접 생성한 프로젝트 수입니다.
+  </Card>
+  <Card title="지식베이스 활용 수" icon="database">
+    RAG 기능을 통해 지식베이스를 참조한 질문 건수입니다.
+  </Card>
+  <Card title="MCP 도구 사용 수" icon="plug">
+    외부 MCP 도구를 활용한 실습 횟수입니다.
+  </Card>
+</CardGroup>
+
+---
+
+## 학생 관리 활용 팁
+
+<AccordionGroup>
+  <Accordion title="저참여 학생 파악하기" icon="triangle-exclamation">
+    최근 접속일 기준으로 정렬하면 장기간 접속하지 않은 학생을 쉽게 파악할 수 있습니다. 해당 학생들에게 별도로 연락하여 학습을 독려하세요.
+  </Accordion>
+  <Accordion title="우수 학생 식별하기" icon="star">
+    총 대화 수 기준으로 내림차순 정렬하면 AI 실습에 가장 적극적으로 참여한 학생을 확인할 수 있습니다.
+  </Accordion>
+  <Accordion title="기능 미활용 학생 지원하기" icon="hand-holding-heart">
+    학습 활동 요약 항목(지식베이스, MCP 도구 등)에서 0인 학생은 해당 기능을 아직 사용하지 않은 것입니다. 수업 중 별도 안내를 통해 다양한 기능을 경험할 수 있도록 유도하세요.
+  </Accordion>
+</AccordionGroup>
